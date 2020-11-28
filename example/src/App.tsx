@@ -1,17 +1,12 @@
 import * as React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import CodeEditor from 'react-native-code-editor';
+import CodeEditor from './CodeEditor';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    CodeEditor.multiply(3, 7).then(setResult);
-  }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <CodeEditor language={"Swift"} height={100} width={100} style={{backgroundColor: "#FF0000", height: 300, width: 200}} />
     </View>
   );
 }

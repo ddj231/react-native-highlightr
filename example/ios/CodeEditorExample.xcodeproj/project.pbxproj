@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D1336C0461A88D01186E375 /* libPods-CodeEditorExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEA90A70F4BEAD7E9FA28B2 /* libPods-CodeEditorExample.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		20F357B024636CDF00C146DC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F357AF24636CDF00C146DC /* File.swift */; };
+		4CAAC18D7C790E99BB20656D /* libPods-CodeEditorExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1148F27E9C2E6454465AB9CE /* libPods-CodeEditorExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		1148F27E9C2E6454465AB9CE /* libPods-CodeEditorExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeEditorExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* CodeEditorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeEditorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CodeEditorExample/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CodeEditorExample/AppDelegate.m; sourceTree = "<group>"; };
@@ -27,10 +28,9 @@
 		20F357AD24636CDE00C146DC /* CodeEditorExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeEditorExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		20F357AE24636CDF00C146DC /* CodeEditorExample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CodeEditorExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		20F357AF24636CDF00C146DC /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		4D7192F03A36A017E887435B /* Pods-CodeEditorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeEditorExample.release.xcconfig"; path = "Target Support Files/Pods-CodeEditorExample/Pods-CodeEditorExample.release.xcconfig"; sourceTree = "<group>"; };
-		871719007ECC5EAD276C345C /* Pods-CodeEditorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeEditorExample.debug.xcconfig"; path = "Target Support Files/Pods-CodeEditorExample/Pods-CodeEditorExample.debug.xcconfig"; sourceTree = "<group>"; };
-		BCEA90A70F4BEAD7E9FA28B2 /* libPods-CodeEditorExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeEditorExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		288DB0D073CB42621D2310EA /* Pods-CodeEditorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeEditorExample.debug.xcconfig"; path = "Target Support Files/Pods-CodeEditorExample/Pods-CodeEditorExample.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F635EFBA8831E9EE25704738 /* Pods-CodeEditorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeEditorExample.release.xcconfig"; path = "Target Support Files/Pods-CodeEditorExample/Pods-CodeEditorExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D1336C0461A88D01186E375 /* libPods-CodeEditorExample.a in Frameworks */,
+				4CAAC18D7C790E99BB20656D /* libPods-CodeEditorExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,8 +62,8 @@
 		1CFFDEF7170271C97B8B7E5A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				871719007ECC5EAD276C345C /* Pods-CodeEditorExample.debug.xcconfig */,
-				4D7192F03A36A017E887435B /* Pods-CodeEditorExample.release.xcconfig */,
+				288DB0D073CB42621D2310EA /* Pods-CodeEditorExample.debug.xcconfig */,
+				F635EFBA8831E9EE25704738 /* Pods-CodeEditorExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -72,7 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				BCEA90A70F4BEAD7E9FA28B2 /* libPods-CodeEditorExample.a */,
+				1148F27E9C2E6454465AB9CE /* libPods-CodeEditorExample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,12 +116,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CodeEditorExample" */;
 			buildPhases = (
-				CCCC07BCAFDEF1FCADC0D0C9 /* [CP] Check Pods Manifest.lock */,
+				1117966E7BF62EC9B4E7E3B6 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				4DED6A87372FD265F841612D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,7 +193,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		CCCC07BCAFDEF1FCADC0D0C9 /* [CP] Check Pods Manifest.lock */ = {
+		1117966E7BF62EC9B4E7E3B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -212,6 +213,202 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DED6A87372FD265F841612D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CodeEditorExample/Pods-CodeEditorExample-resources.sh",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/Highlighter/highlight.min.js",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/a11y-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/a11y-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/agate.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/an-old-hope.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/androidstudio.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/arduino-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/arta.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/ascetic.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-cave-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-cave-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-dune-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-dune-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-estuary-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-estuary-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-forest-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-forest-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-heath-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-heath-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-lakeside-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-lakeside-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-plateau-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-plateau-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-savanna-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-savanna-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-seaside-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-seaside-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-sulphurpool-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atelier-sulphurpool-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atom-one-dark-reasonable.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atom-one-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/atom-one-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/brown-paper.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/codepen-embed.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/color-brewer.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/darcula.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/darkula.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/default.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/docco.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/dracula.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/far.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/foundation.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/github-gist.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/github.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/gml.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/googlecode.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/grayscale.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/gruvbox-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/gruvbox-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/hopscotch.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/hybrid.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/idea.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/ir-black.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/isbl-editor-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/isbl-editor-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/kimbie.dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/kimbie.light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/lightfair.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/magula.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/mono-blue.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/monokai-sublime.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/monokai.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/nord.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/obsidian.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/ocean.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/paraiso-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/paraiso-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/pojoaque.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/purebasic.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/qtcreator_dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/qtcreator_light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/railscasts.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/rainbow.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/routeros.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/school-book.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/shades-of-purple.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/solarized-dark.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/solarized-light.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/sunburst.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/tomorrow-night-blue.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/tomorrow-night-bright.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/tomorrow-night-eighties.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/tomorrow-night.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/tomorrow.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/vs.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/vs2015.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/xcode.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/xt256.min.css",
+				"${PODS_ROOT}/Highlightr/Pod/Assets/styles/zenburn.min.css",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/highlight.min.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/a11y-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/a11y-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/agate.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/an-old-hope.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/androidstudio.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arduino-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arta.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ascetic.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-cave-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-cave-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-dune-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-dune-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-estuary-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-estuary-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-forest-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-forest-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-heath-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-heath-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-lakeside-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-lakeside-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-plateau-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-plateau-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-savanna-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-savanna-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-seaside-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-seaside-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-sulphurpool-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atelier-sulphurpool-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atom-one-dark-reasonable.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atom-one-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/atom-one-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/brown-paper.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/codepen-embed.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/color-brewer.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/darcula.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/darkula.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/default.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/docco.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/dracula.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/far.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/foundation.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/github-gist.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/github.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gml.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/googlecode.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/grayscale.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gruvbox-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gruvbox-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/hopscotch.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/hybrid.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/idea.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ir-black.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/isbl-editor-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/isbl-editor-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/kimbie.dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/kimbie.light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lightfair.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/magula.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mono-blue.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/monokai-sublime.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/monokai.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/nord.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/obsidian.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ocean.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/paraiso-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/paraiso-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pojoaque.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/purebasic.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/qtcreator_dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/qtcreator_light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/railscasts.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/rainbow.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/routeros.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/school-book.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/shades-of-purple.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/solarized-dark.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/solarized-light.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/sunburst.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/tomorrow-night-blue.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/tomorrow-night-bright.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/tomorrow-night-eighties.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/tomorrow-night.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/tomorrow.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/vs.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/vs2015.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/xcode.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/xt256.min.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zenburn.min.css",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodeEditorExample/Pods-CodeEditorExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -263,7 +460,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 871719007ECC5EAD276C345C /* Pods-CodeEditorExample.debug.xcconfig */;
+			baseConfigurationReference = 288DB0D073CB42621D2310EA /* Pods-CodeEditorExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -291,7 +488,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D7192F03A36A017E887435B /* Pods-CodeEditorExample.release.xcconfig */;
+			baseConfigurationReference = F635EFBA8831E9EE25704738 /* Pods-CodeEditorExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
