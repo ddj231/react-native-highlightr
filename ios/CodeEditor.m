@@ -4,8 +4,8 @@
 @interface RCT_EXTERN_MODULE(CodeEditor, RCTViewManager)
 
 RCT_EXPORT_VIEW_PROPERTY(language, NSString)
-RCT_EXPORT_VIEW_PROPERTY(height,int)
-RCT_EXPORT_VIEW_PROPERTY(width, int)
+RCT_EXPORT_VIEW_PROPERTY(theme, NSString)
+//RCT_EXPORT_VIEW_PROPERTY(onChangeText, RCTBubblingEventBlock)
 
 /*
 RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b

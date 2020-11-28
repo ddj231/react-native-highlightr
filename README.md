@@ -11,11 +11,7 @@ npm install react-native-code-editor
 ## Usage
 
 ```js
-import CodeEditor from "react-native-code-editor";
-
-// ...
-
-const result = await CodeEditor.multiply(3, 7);
+<CodeEditor language={"Swift"} theme={"atom-one-dark"} style={{backgroundColor: "#000000", height: 300, width: 200}} />
 ```
 
 ## Contributing
