@@ -1,3 +1,4 @@
+/*
 import PropTypes from 'prop-types';
 import React from 'react';
 import {requireNativeComponent} from 'react-native';
@@ -16,3 +17,4 @@ export default class CodeEditorView extends React.Component {
 
 //module.exports = requireNativeComponent("CodeEditor");
 var RNTCodeEditor = requireNativeComponent("RNTCodeEditor");
+*/

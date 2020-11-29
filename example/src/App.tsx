@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, View, Keyboard, TouchableWithoutFeedback } from 'react-native';
-import CodeEditorView from './CodeEditor';
-//import CodeEditorView from 'react-native-code-editor';
+//import CodeEditorView from './CodeEditor';
+import CodeEditorView from 'react-native-code-editor';
 
 export default function App() {
   let onChange = (event) => {
