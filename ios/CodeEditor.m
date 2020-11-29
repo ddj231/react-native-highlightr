@@ -1,11 +1,12 @@
 #import <React/RCTBridgeModule.h>
 #import <React/RCTViewManager.h>
 
-@interface RCT_EXTERN_MODULE(CodeEditor, RCTViewManager)
+@interface RCT_EXTERN_MODULE(RNTCodeEditor, RCTViewManager)
 
 RCT_EXPORT_VIEW_PROPERTY(language, NSString)
 RCT_EXPORT_VIEW_PROPERTY(theme, NSString)
-//RCT_EXPORT_VIEW_PROPERTY(onChangeText, RCTBubblingEventBlock)
+RCT_EXPORT_VIEW_PROPERTY(value, NSString)
+RCT_EXPORT_VIEW_PROPERTY(onChangeText, RCTBubblingEventBlock)
 
 /*
 RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b

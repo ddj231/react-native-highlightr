@@ -2,7 +2,7 @@ import UIKit
 import Highlightr
 
 
-class CodeEditorView: UIView {
+class CodeEditorView: UIView, UITextViewDelegate {
     
     @objc var language = "Swift" {
         didSet {
@@ -18,12 +18,23 @@ class CodeEditorView: UIView {
     
     @objc var textView: UITextView?
     
-    //@objc var onChangeText: RCTBubblingEventBlock?
+    @objc var onChangeText: RCTBubblingEventBlock?
+    
+    @objc var value = "" {
+        didSet {
+            guard textView != nil else {
+                return
+            }
+            textView!.text = value
+            //let range = NSMakeRange(0, textView!.textStorage.string.count)
+            //textView!.textStorage.replaceCharacters(in: range, with: value)
+        }
+    }
     
 
      override init(frame: CGRect) {
-       super.init(frame: frame)
-       setupView()
+        super.init(frame: frame)
+        setupView()
      }
 
     
@@ -31,23 +42,6 @@ class CodeEditorView: UIView {
         super.init(coder: aDecoder)
         setupView()
     }
-    
-    /*
-    func addChangeTextObserver(){
-        NotificationCenter.default.addObserver(self, selector: #selector(handleChangeText(notification:)), name: UITextView.textDidChangeNotification, object: self.textView!)
-    }
-    
-    @objc func handleChangeText(notification: Notification){
-        guard textView != nil else {
-            return
-        }
-        guard let onChangeText = self.onChangeText else {
-            return
-        }
-        
-        onChangeText(self.textView!.text)
-    }
-    */
     
     private func setupView() {
         let textStorage = CodeAttributedString()
@@ -63,8 +57,10 @@ class CodeEditorView: UIView {
         
         textView = UITextView(frame: self.bounds, textContainer: textContainer)
         textView?.backgroundColor = UIColor.clear
-        //addChangeTextObserver()
-        
+        textView?.delegate = self
+        guard self.textView != nil else {return}
+        self.textView!.text = value
+
         for view in self.subviews {
             view.removeFromSuperview()
         }
@@ -89,11 +85,16 @@ class CodeEditorView: UIView {
         ])
     }
     
-
+    //MARK: Text View Delegate
+    func textViewDidChange(_ textView: UITextView) {
+        guard self.textView != nil else { return }
+        guard let onChangeText = self.onChangeText else { return }
+        onChangeText(["text": self.textView!.textStorage.string])
+    }
 }
 
-@objc(CodeEditor)
-class CodeEditor: RCTViewManager {
+@objc(RNTCodeEditor)
+class RNTCodeEditor: RCTViewManager {
 
     override static func requiresMainQueueSetup() -> Bool {
       return true
