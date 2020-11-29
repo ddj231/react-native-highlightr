@@ -1,6 +1,6 @@
 # react-native-code-editor
 
-a code editor component for react native
+a code editor component for react native -- this component is a wrapper of Highlightr
 
 ## Installation
 
@@ -11,7 +11,7 @@ npm install react-native-code-editor
 ## Usage
 
 ```js
-<CodeEditor language={"Swift"} theme={"atom-one-dark"} style={{backgroundColor: "#000000", height: 300, width: 200}} />
+<CodeEditor language={"Swift"} theme={"atom-one-dark"} value={"func helloWorld(){}"} onChangeText={someFunc}/>
 ```
 
 ## Contributing
