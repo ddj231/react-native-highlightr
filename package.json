@@ -1,6 +1,6 @@
 {
   "name": "react-native-highlightr",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "description": "a code editor component for react native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -13,7 +13,7 @@
     "android",
     "ios",
     "cpp",
-    "react-native-highlightr.podspec",
+    "react-native-code-editor.podspec",
     "!lib/typescript/example",
     "!**/__tests__",
     "!**/__fixtures__",
