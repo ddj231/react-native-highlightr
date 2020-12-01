@@ -6,6 +6,10 @@ a code editor component for react native -- this component is a wrapper of Highl
 
 ```sh
 npm install react-native-highlightr
+
+cd ios
+
+pod install
 ```
 
 ## Usage
