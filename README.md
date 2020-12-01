@@ -1,4 +1,4 @@
-# react-native-code-editor
+# react-native-highlightr
 
 a code editor component for react native -- this component is a wrapper of Highlightr
 
