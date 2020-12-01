@@ -2,7 +2,7 @@ import UIKit
 import Highlightr
 
 
-class CodeEditorView: UIView, UITextViewDelegate {
+class CodeEditorView: UIScrollView, UITextViewDelegate {
     
     @objc var language = "Swift" {
         didSet {
@@ -19,6 +19,7 @@ class CodeEditorView: UIView, UITextViewDelegate {
     @objc var textView: UITextView?
     
     @objc var onChangeText: RCTBubblingEventBlock?
+    @objc var onPress: RCTBubblingEventBlock?
     
     @objc var value = "" {
         didSet {
@@ -28,6 +29,22 @@ class CodeEditorView: UIView, UITextViewDelegate {
             textView!.text = value
             //let range = NSMakeRange(0, textView!.textStorage.string.count)
             //textView!.textStorage.replaceCharacters(in: range, with: value)
+        }
+    }
+    @objc var editable = true {
+        didSet {
+            guard textView != nil else {
+                return
+            }
+            textView!.isEditable = editable
+        }
+    }
+    
+    @objc var forceKeyboardResign = false {
+        didSet {
+            if(forceKeyboardResign == true){
+                self.blur()
+            }
         }
     }
     
@@ -51,13 +68,18 @@ class CodeEditorView: UIView, UITextViewDelegate {
         let layoutManager = NSLayoutManager()
         textStorage.addLayoutManager(layoutManager)
        
-        let size  = CGSize(width: self.bounds.height, height: self.bounds.width)
+        let size  = CGSize(width: self.bounds.width, height: .greatestFiniteMagnitude)
         let textContainer = NSTextContainer(size: size)
         layoutManager.addTextContainer(textContainer)
         
         textView = UITextView(frame: self.bounds, textContainer: textContainer)
         textView?.backgroundColor = UIColor.clear
         textView?.delegate = self
+        textView?.isScrollEnabled = true
+        if #available(iOS 13, *){
+            textView?.automaticallyAdjustsScrollIndicatorInsets = false
+        }
+
         guard self.textView != nil else {return}
         self.textView!.text = value
 
@@ -78,13 +100,27 @@ class CodeEditorView: UIView, UITextViewDelegate {
         NSLayoutConstraint.activate([
             textView!.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 5),
             textView!.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: 5),
-            textView!.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: 5),
+            //textView!.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: 5),
             textView!.topAnchor.constraint(equalTo: margins.topAnchor, constant: 5),
             textView!.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             textView!.centerYAnchor.constraint(equalTo: self.centerYAnchor),
         ])
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let onPress = self.onPress else {
+            return
+        }
+        onPress([:])
+    }
+    
+    @objc func blur(){
+        guard self.textView != nil else {
+            return
+        }
+        self.textView!.resignFirstResponder()
+    }
+
     //MARK: Text View Delegate
     func textViewDidChange(_ textView: UITextView) {
         guard self.textView != nil else { return }

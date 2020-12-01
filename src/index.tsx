@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React from 'react';
 import {requireNativeComponent} from 'react-native';
 
@@ -8,8 +10,15 @@ export default class CodeEditorView extends React.Component {
         }
         this.props.onChangeText(event.nativeEvent);
     }
+
+    _onPress = () => {
+        if(!this.props.onPress){
+            return;
+        }
+        this.props.onPress();
+    }
    render(){
-       return <RNTCodeEditor {...this.props} onChangeText={this._onChangeText}/>
+       return <RNTCodeEditor {...this.props} onChangeText={this._onChangeText} onPress={this._onPress}/>
    } 
 }
 //module.exports = requireNativeComponent("CodeEditor");

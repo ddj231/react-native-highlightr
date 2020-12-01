@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import * as React from 'react';
 import { StyleSheet, View, Keyboard, TouchableWithoutFeedback } from 'react-native';
 //import CodeEditorView from './CodeEditor';
@@ -7,12 +9,23 @@ export default function App() {
   let onChange = (event) => {
     console.log(event.text)
   }
+
+  function dismissKeyboard(){
+    Keyboard.dismiss();
+  }
+
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <View style={styles.container}>
-      <CodeEditorView value={'func hello world(){\n\tprint("hi remote collab")\n}'} language={"Swift"} theme={"atom-one-dark"} onChangeText={onChange} style={{backgroundColor: "#000000", height: 300, width: 200}} />
-    </View>
+    <TouchableWithoutFeedback onPress={dismissKeyboard}>
+      <CodeEditorView 
+      value={'@objc func hello world(){\n\tprint("hi remote collab")\n}'} 
+      language={"Swift"} 
+      theme={"atom-one-dark"} 
+      onChangeText={onChange} 
+      style={{backgroundColor: "#000000", height: 300, width: 200}} 
+      />
     </TouchableWithoutFeedback>
+    </View>
   );
 }
 
