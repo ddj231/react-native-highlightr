@@ -1,6 +1,6 @@
 {
   "name": "react-native-highlightr",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "a code editor component for react native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -13,7 +13,7 @@
     "android",
     "ios",
     "cpp",
-    "react-native-code-editor.podspec",
+    "react-native-highlightr.podspec",
     "!lib/typescript/example",
     "!**/__tests__",
     "!**/__fixtures__",
@@ -34,13 +34,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/ddj231/react-native-code-editor",
+  "repository": "https://github.com/ddj231/react-native-highlightr",
   "author": "Daye Jack <ddj231@nyu.edu> (https://github.com/ddj231)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ddj231/react-native-code-editor/issues"
+    "url": "https://github.com/ddj231/react-native-highlightr/issues"
   },
-  "homepage": "https://github.com/ddj231/react-native-code-editor#readme",
+  "homepage": "https://github.com/ddj231/react-native-highlightr#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",
     "@react-native-community/bob": "^0.16.2",
