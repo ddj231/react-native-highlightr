@@ -11,7 +11,7 @@ npm install react-native-highlightr
 ## Usage
 
 ```js
-import HiglightrView from 'react-native-highlightr'
+import HighlightrView from 'react-native-highlightr'
 ...
 <HighlightrView language={"Swift"} theme={"atom-one-dark"} value={"func helloWorld(){}"} onChangeText={someFunc}/>
 ```
