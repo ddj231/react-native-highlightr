@@ -6,8 +6,8 @@ import { StyleSheet, View, Keyboard, TouchableWithoutFeedback } from 'react-nati
 import CodeEditorView from 'react-native-highlightr';
 
 export default function App() {
-  let onChange = (event) => {
-    console.log(event.text)
+  let onChange = (text) => {
+    console.log(text)
   }
 
   function dismissKeyboard(){

@@ -8,7 +8,7 @@ export default class CodeEditorView extends React.Component {
         if(!this.props.onChangeText){
             return;
         }
-        this.props.onChangeText(event.nativeEvent);
+        this.props.onChangeText(event.nativeEvent.text);
     }
 
     _onPress = () => {
