@@ -11,17 +11,20 @@ npm install react-native-highlightr
 ## Usage
 
 ```js
-import CodeEditorView from 'react-native-highlightr'
-
-<CodeEditorView language={"Swift"} theme={"atom-one-dark"} value={"func helloWorld(){}"} onChangeText={someFunc}/>
+import HiglightrView from 'react-native-highlightr'
+...
+<Highlightr language={"Swift"} theme={"atom-one-dark"} value={"func helloWorld(){}"} onChangeText={someFunc}/>
 ```
 
 ### Props (more formal documentation coming soon)
+
 *see [highlightrjs](https://highlightjs.org) for availabe languages and themes*
-language - type: String,  description: the name of the coding language to be highlighted
-theme - type: String, description: theme for syntax highlighing
-value - type: String, description: a string value for the code editor view (mirrors text input value prop usagae)
-onChangeText - type: String []
+
+* **language** - type: String,  description: the name of the coding language to be highlighted
+* **theme** - type: String, description: theme for syntax highlighing
+* **value** - type: String, description: a string value for the code editor view (mirrors text input value prop usagae)
+* **onChangeText** - type: Function, description: a callback function that has the current string value of the highlightr view passed in 
+* **onPress** - type: Function, description: a callback function called whenever the highlightr view is pressed 
 
 ## Contributing
 
