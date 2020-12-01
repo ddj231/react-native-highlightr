@@ -1,6 +1,6 @@
 {
   "name": "react-native-highlightr",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "a code editor component for react native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
