@@ -30,13 +30,12 @@ class CodeEditorView: UIScrollView, UITextViewDelegate {
                 let cursorPosition = textView!.offset(from: textView!.beginningOfDocument, to: selectedRange.start)
                     textView!.text = value
                     textView!.selectedTextRange = selectedRange
+                    textView!.textStorage.processEditing()
             }
             else{
                     textView!.text = value
+                    textView!.textStorage.processEditing()
             }
-            
-            //let range = NSMakeRange(0, textView!.textStorage.string.count)
-            //textView!.textStorage.replaceCharacters(in: range, with: value)
         }
     }
     @objc var editable = true {
@@ -150,25 +149,6 @@ class CodeEditorView: UIScrollView, UITextViewDelegate {
        
         onChangeText(["text": self.textView!.textStorage.string])
     }
-    /*
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        //Update text
-        if let oldText = textView.text {
-            textView.text = NSString(string: oldText).replacingCharacters(in: range, with: text)
-        }
-        // Update Cursor
-         let positionOriginal = textView.beginningOfDocument
-         let cursorLocation = textView.position(from: positionOriginal, offset: (range.location + text.count))
-         if let cursorLocation = cursorLocation {
-             textView.selectedTextRange = textView.textRange(from: cursorLocation, to: cursorLocation)
-         }
-        
-        guard let onChangeText = self.onChangeText else { return false }
-        onChangeText(["text": self.textView!.textStorage.string])
-
-        return false
-    }
- */
 }
 
 @objc(RNTCodeEditor)
