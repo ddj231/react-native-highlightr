@@ -26,7 +26,15 @@ class CodeEditorView: UIScrollView, UITextViewDelegate {
             guard textView != nil else {
                 return
             }
-            textView!.text = value
+            if let selectedRange = textView?.selectedTextRange {
+                let cursorPosition = textView!.offset(from: textView!.beginningOfDocument, to: selectedRange.start)
+                    textView!.text = value
+                    textView!.selectedTextRange = selectedRange
+            }
+            else{
+                    textView!.text = value
+            }
+            
             //let range = NSMakeRange(0, textView!.textStorage.string.count)
             //textView!.textStorage.replaceCharacters(in: range, with: value)
         }
@@ -45,6 +53,12 @@ class CodeEditorView: UIScrollView, UITextViewDelegate {
             if(forceKeyboardResign == true){
                 self.blur()
             }
+        }
+    }
+    
+    @objc var keyboardAppearance = "dark" {
+        didSet {
+            self.setupView()
         }
     }
     
@@ -76,6 +90,14 @@ class CodeEditorView: UIScrollView, UITextViewDelegate {
         textView?.backgroundColor = UIColor.clear
         textView?.delegate = self
         textView?.isScrollEnabled = true
+        //textView?.autocorrectionType = .no
+        //textView?.spellCheckingType = .no
+        //textView?.autocapitalizationType = .none
+        if keyboardAppearance == "dark" || keyboardAppearance == "light"{
+            let keyboardDict = ["dark": UIKeyboardAppearance.dark, "light": UIKeyboardAppearance.light]
+            self.textView?.keyboardAppearance = keyboardDict[keyboardAppearance]!
+        }
+        
         if #available(iOS 13, *){
             textView?.automaticallyAdjustsScrollIndicatorInsets = false
         }
@@ -125,8 +147,28 @@ class CodeEditorView: UIScrollView, UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         guard self.textView != nil else { return }
         guard let onChangeText = self.onChangeText else { return }
+       
         onChangeText(["text": self.textView!.textStorage.string])
     }
+    /*
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        //Update text
+        if let oldText = textView.text {
+            textView.text = NSString(string: oldText).replacingCharacters(in: range, with: text)
+        }
+        // Update Cursor
+         let positionOriginal = textView.beginningOfDocument
+         let cursorLocation = textView.position(from: positionOriginal, offset: (range.location + text.count))
+         if let cursorLocation = cursorLocation {
+             textView.selectedTextRange = textView.textRange(from: cursorLocation, to: cursorLocation)
+         }
+        
+        guard let onChangeText = self.onChangeText else { return false }
+        onChangeText(["text": self.textView!.textStorage.string])
+
+        return false
+    }
+ */
 }
 
 @objc(RNTCodeEditor)

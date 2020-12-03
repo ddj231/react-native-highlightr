@@ -6,8 +6,10 @@ import { StyleSheet, View, Keyboard, TouchableWithoutFeedback } from 'react-nati
 import CodeEditorView from 'react-native-highlightr';
 
 export default function App() {
+  let [codeText, setCodeText] = React.useState("")
   let onChange = (text) => {
     console.log(text)
+    setCodeText(text)
   }
 
   function dismissKeyboard(){
@@ -18,10 +20,11 @@ export default function App() {
     <View style={styles.container}>
     <TouchableWithoutFeedback onPress={dismissKeyboard}>
       <CodeEditorView 
-      value={'@objc func hello world(){\n\tprint("hi remote collab")\n}'} 
+      value={codeText} 
       language={"Swift"} 
       theme={"atom-one-dark"} 
       onChangeText={onChange} 
+      keyboardAppearance={"dark"}
       style={{backgroundColor: "#000000", height: 300, width: 200}} 
       />
     </TouchableWithoutFeedback>
