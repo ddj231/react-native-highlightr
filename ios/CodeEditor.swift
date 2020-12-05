@@ -26,15 +26,19 @@ class CodeEditorView: UIScrollView, UITextViewDelegate {
             guard textView != nil else {
                 return
             }
+            let textRange = textView!.textRange(from: textView!.beginningOfDocument, to: textView!.endOfDocument)!
+            let location:Int = textView!.offset(from: textView!.beginningOfDocument, to: textRange.start)
+            let length:Int = textView!.offset(from: textRange.start, to: textRange.end)
+            let range = NSMakeRange(location, length)
             if let selectedRange = textView?.selectedTextRange {
                 let cursorPosition = textView!.offset(from: textView!.beginningOfDocument, to: selectedRange.start)
-                    textView!.text = value
-                    textView!.selectedTextRange = selectedRange
-                    textView!.textStorage.processEditing()
+                textView!.textStorage.replaceCharacters(in: range, with: value)
+                textView!.selectedTextRange = selectedRange
+                //textView!.textStorage.processEditing()
             }
             else{
-                    textView!.text = value
-                    textView!.textStorage.processEditing()
+                textView!.textStorage.replaceCharacters(in: range, with: value)
+                //textView!.textStorage.processEditing()
             }
         }
     }
@@ -57,7 +61,7 @@ class CodeEditorView: UIScrollView, UITextViewDelegate {
     
     @objc var keyboardAppearance = "dark" {
         didSet {
-            self.setupView()
+            setupView()
         }
     }
     
@@ -85,39 +89,45 @@ class CodeEditorView: UIScrollView, UITextViewDelegate {
         let textContainer = NSTextContainer(size: size)
         layoutManager.addTextContainer(textContainer)
         
-        textView = UITextView(frame: self.bounds, textContainer: textContainer)
-        textView?.backgroundColor = UIColor.clear
-        textView?.delegate = self
-        textView?.isScrollEnabled = true
-        //textView?.autocorrectionType = .no
-        //textView?.spellCheckingType = .no
-        //textView?.autocapitalizationType = .none
+        self.textView = UITextView(frame: self.bounds, textContainer: textContainer)
+
+        self.textView?.backgroundColor = UIColor.clear
+        self.textView?.delegate = self
+        self.textView?.isScrollEnabled = true
+        self.textView?.autocorrectionType = .no
+        self.textView?.spellCheckingType = .no
+        self.textView?.autocapitalizationType = .none
+
+        if #available(iOS 13, *){
+            self.textView?.automaticallyAdjustsScrollIndicatorInsets = false
+        }
+        if #available(iOS 11, *){
+            self.textView?.smartQuotesType = .no
+        }
+
         if keyboardAppearance == "dark" || keyboardAppearance == "light"{
             let keyboardDict = ["dark": UIKeyboardAppearance.dark, "light": UIKeyboardAppearance.light]
             self.textView?.keyboardAppearance = keyboardDict[keyboardAppearance]!
+            //self.textView?.reloadInputViews()
         }
         
-        if #available(iOS 13, *){
-            textView?.automaticallyAdjustsScrollIndicatorInsets = false
-        }
-
         guard self.textView != nil else {return}
-        self.textView!.text = value
-
-        for view in self.subviews {
-            view.removeFromSuperview()
-        }
+        //self.textView!.text = value
         
-        self.addSubview(textView!)
+         for view in self.subviews {
+            view.removeFromSuperview()
+         }
+        
+        self.addSubview(self.textView!)
     }
     
     override func layoutSubviews() {
-        setupView()
         let margins = self.layoutMarginsGuide
         guard textView != nil else {
             return
         }
-        
+        self.textView!.frame = self.bounds
+
         NSLayoutConstraint.activate([
             textView!.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 5),
             textView!.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: 5),
@@ -148,6 +158,7 @@ class CodeEditorView: UIScrollView, UITextViewDelegate {
         guard let onChangeText = self.onChangeText else { return }
        
         onChangeText(["text": self.textView!.textStorage.string])
+       // onChangeText(["text": self.textView!.text!])
     }
 }
 

@@ -1,14 +1,14 @@
 // @ts-nocheck
 
 import * as React from 'react';
-import { StyleSheet, View, Keyboard, TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet, View, Keyboard,KeyboardAvoidingView, TouchableWithoutFeedback } from 'react-native';
 //import CodeEditorView from './CodeEditor';
 import CodeEditorView from 'react-native-highlightr';
 
 export default function App() {
-  let [codeText, setCodeText] = React.useState("")
+  let [codeText, setCodeText] = React.useState("function hello_world(){}")
   let onChange = (text) => {
-    console.log(text)
+    console.log("text is", text)
     setCodeText(text)
   }
 
@@ -19,6 +19,10 @@ export default function App() {
   return (
     <View style={styles.container}>
     <TouchableWithoutFeedback onPress={dismissKeyboard}>
+      <KeyboardAvoidingView
+        behavior="padding"
+        style={{flex: 1, justifyContent:"flex-end"}}
+      >
       <CodeEditorView 
       value={codeText} 
       language={"Swift"} 
@@ -27,6 +31,7 @@ export default function App() {
       keyboardAppearance={"dark"}
       style={{backgroundColor: "#000000", height: 300, width: 200}} 
       />
+    </KeyboardAvoidingView>
     </TouchableWithoutFeedback>
     </View>
   );
