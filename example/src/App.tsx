@@ -25,7 +25,7 @@ export default function App() {
       >
       <CodeEditorView 
       value={codeText} 
-      language={"Swift"} 
+      language={"Javascript"} 
       theme={"atom-one-dark"} 
       onChangeText={onChange} 
       keyboardAppearance={"dark"}
