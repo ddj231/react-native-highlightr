@@ -2,6 +2,8 @@
 
 a code editor component for react native -- this component is a wrapper of Highlightr
 
+*currently ios only* 
+
 ## Installation
 
 ```sh
