@@ -29,9 +29,10 @@ import HighlightrView from 'react-native-highlightr'
 * **language** - *type*: String,  *description*: the name of the coding language to be highlighted
 * **theme** - *type*: String, *description*: theme for syntax highlighing
 * **value** - *type*: String, *description*: a string value for the code editor view (mirrors text input value prop usagae)
-* **editable** - *type*: Boolean, *description*: a boolean to toggle whether the highlightr view's text is editable (if false, keyboard is disabled) 
-* **onChangeText** - *type*: Function, *description*: a callback function that has the current string value of the highlightr view passed in 
-* **onPress** - *type*: Function, *description*: a callback function called whenever the highlightr view is pressed 
+* **editable** - *type*: Boolean, *description*: a boolean to toggle whether the text view's text is editable (if false, keyboard is disabled) 
+* **onChangeText** - *type*: Function, *description*: a callback function that has the current string value of the text view passed in 
+* **onPress** - *type*: Function, *description*: a callback function called whenever the text view is pressed 
+* **keyboardAppearance** - *type*: enum ['light', 'dark'], *description*: sets keyboard appearance for the text view
 
 ## Contributing
 
