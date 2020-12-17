@@ -1,6 +1,7 @@
 # react-native-highlightr
 
-a code editor component for react native -- this component is a wrapper of Highlightr
+react-native-highlightr is a simple a code editor component for react native. It wraps the Highlightr cocoapod and supports syntax higlighting
+for all languages supported by highlightrjs.
 
 *currently ios only* 
 
