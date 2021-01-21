@@ -23,7 +23,7 @@ import HighlightrView from 'react-native-highlightr'
 <HighlightrView language={"Swift"} theme={"atom-one-dark"} value={"func helloWorld(){}"} onChangeText={someFunc}/>
 ```
 
-### Props (more formal documentation coming soon)
+### Props 
 
 *see [highlightrjs](https://highlightjs.org) for availabe languages and themes*
 
